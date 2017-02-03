@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing Chrome App</title>
+</head>
+<body>
+<script type="text/javascript">
+	 // The ID of the extension we want to talk to.
+    var editorExtensionId = "elpffohokgbhfilmblnnpppaefnakkkf";
+
+   	// Make a simple request:
+   	chrome.runtime.sendMessage(editorExtensionId, 
+	   { data: "data to pass to the chrome app" },  
+	   function (response)
+	   {
+	    	alert(response);
+	   }
+	);
+</script>
+</body>
+</html>
